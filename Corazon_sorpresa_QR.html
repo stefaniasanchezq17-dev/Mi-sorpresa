@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para ti ❤️</title>
+<style>
+body{margin:0;background:#0f0f0f;color:#fff;font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;text-align:center}
+.wrap{padding:24px}
+#heart{font-size:90px;cursor:pointer;animation:latir .8s infinite}
+@keyframes latir{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+small{opacity:.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div id="heart">❤️</div>
+<h2>Tócame 5 veces...</h2>
+<p id="t">Faltan 5 latidos</p>
+<small>Hecho con mucho amor 💌</small>
+</div>
+<script>
+let c=0;
+const url="https://canva.link/9hq5qdmpt31brsk";
+heart.onclick=()=>{
+ c++;
+ const f=5-c;
+ if(f>0){t.textContent=`Faltan ${f} latidos`;heart.style.transform=`scale(${1+c*0.08})`;}
+ else{t.textContent="Abriendo tu sorpresa...";setTimeout(()=>location.href=url,700);}
+}
+</script>
+</body>
+</html>
